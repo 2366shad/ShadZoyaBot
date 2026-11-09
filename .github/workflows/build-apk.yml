@@ -19,10 +19,10 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
       - name: Build debug APK
-        working-directory: MastiKingAndroid
+        working-directory: .
         run: gradle --no-daemon assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Shad-Zoya-debug-apk
-          path: MastiKingAndroid/app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
